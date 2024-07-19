@@ -33,7 +33,7 @@
                                 ]);
                               ?>
                         </li>
-                        <li><a href="">Проектирование</a></li>
+                        <li><a href="http://delshab/proektnye-raboty/">Проектирование</a></li>
                     </ul>
                 </aside>
 
@@ -45,28 +45,30 @@
                               Фильтры
                           </div>
                           <aside class="aside sidebar--mobile">
-                            <ul>
+                              <ul>
                                 <li>
-                                    <a href="">Металлические констукции</a>
-                                    <ul class="aside-menu">
-                                        <li ><a href="#">Категория-1</a></li>
-                                        <li><a href="#">Категория-1</a></li>
-                                        <li><a href="#">Категория-1</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="aside--active" href="http://delshab/izdeliya-iz-nerzhavejki/">Изделия из нержавейки</a>
-                                   
-                                  <?php
-                                    wp_nav_menu([
-                                      'theme_location' => 'menu-nerzhaveila',
-                                      'menu_class' => 'aside-menu',
-                                      'container' => ''
-                                    ]);
-                                  ?>
-                                </li>
-                                <li><a href="">Проектирование</a></li>
-                            </ul>
+                                  <a href="http://delshab/metallokonstrukcii/">Металлические конструкции</a>
+                                      <?php
+                                          wp_nav_menu([
+                                            'theme_location' => 'menu-metall',
+                                            'menu_class' => 'aside-menu',
+                                            'container' => ''
+                                          ]);
+                                        ?>
+                                  </li>
+                                  <li>
+                                      <a class="aside--active" href="http://delshab/izdeliya-iz-nerzhavejki/">Изделия из нержавейки</a>
+                                      
+                                        <?php
+                                          wp_nav_menu([
+                                            'theme_location' => 'menu-nerzhaveila',
+                                            'menu_class' => 'aside-menu',
+                                            'container' => ''
+                                          ]);
+                                        ?>
+                                  </li>
+                                  <li><a href="http://delshab/proektnye-raboty/">Проектирование</a></li>
+                              </ul>
                           </aside>
                         </div>
                         <p class="nershaveika-box__info-text">

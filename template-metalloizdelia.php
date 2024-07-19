@@ -1,85 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delsnab</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="./index.html" class="logo">
-          <img class="logo--desctop" src="./images/home/logo-header.svg" alt="img">
-          <img class="logo--mobile" src="./images/home/logo-mobile.svg" alt="img">
-        </a>
-        <div class="menu">
-          <nav class="nav">
-            <ul class="menu__list">
-              <li><a  href="#">Каталог</a></li>
-              <li><a  href="./work.html">Наши работы</a></li>
-              <li><a  href="#">О нас</a></li>
-              <li><a href="./contact.html">Контакты</a></li>
-            </ul>
-          </nav>
-          <div class="box-mobile">
-            <div class="header__contact">
-              <a href="tel:++74955404855" class="header__contact-phone">+7 495 540 48 55</a>
-              <a href="mailto:delsnab@bk.ru" class="header__contact-email">delsnab@bk.ru</a>
-            </div>
-
-            <a href="#" class="header__inner-btn btn">Консультация</a>
-            <div class="header__info">
-              <div class="header__info-date">Пн-пт с 9:00 до 18:00</div>
-              <div class="header__info-address">Мытищи, ул. Силикатная, д.19</div>
-            </div>
-          </div>
-        </div>
-        <div class="header__info">
-          <div class="header__info-date">Пн-пт с 9:00 до 18:00</div>
-          <div class="header__info-address">Мытищи, ул. Силикатная, д.19</div>
-        </div>
-        <div class="header__contact">
-          <a href="tel:++74955404855" class="header__contact-phone">+7 495 540 48 55</a>
-          <a href="mailto:delsnab@bk.ru" class="header__contact-email">delsnab@bk.ru</a>
-        </div>
-        <a href="#" class="header__inner-btn btn">Консультация</a>
-        <div class="nav-icon">
-          <div class="nav-icon__middle"></div>
-        </div>
-      </div>
-    </div>
-  </header>
- 
+<?php
+/**
+ * Template Name: Металлоизделия
+ */
+?>
+<?php get_header();?>
     <main class="main">
-       <section class="nershaveika lestnici">
+        <section class="nershaveika lestnici">
           <div class="container">
             <div class="nershaveika-block">
                 <aside class="aside">
-                    <ul>
-                        <li>
-                            <a class="aside--active" href="">Металлические констукции</a>
-                            <ul class="aside-menu">
-                                <li><a  href="#">Металлические лестницы</a></li>
-                                <li><a href="#">Пожарные лестницы</a></li>
-                                <li><a href="#">Закладные детали</a></li>
-                                <li><a class="aside--active" href="#">Металлоизделия</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">Изделия из нержавейки</a>
-                            <ul class="aside-menu">
-                                <li><a  href="#">Перила</a></li>
-                                <li><a  href="#">Ограждения</a></li>
-                                <li><a  href="#">Лестницы</a></li>
-                            </ul>
-                        </li>
-                        <li><a  href="">Проектирование</a></li>
-                    </ul>
+                  <ul>
+                    <li>
+                        <a class="aside--active" href="">Металлические конструкции</a>
+                        <?php
+                            wp_nav_menu([
+                              'theme_location' => 'menu-metall',
+                              'menu_class' => 'aside-menu',
+                              'container' => ''
+                            ]);
+                          ?>
+                      </li>
+                      <li>
+                        <a  href="http://delshab/izdeliya-iz-nerzhavejki/">Изделия из нержавейки</a>
+                              
+                        <?php
+                          wp_nav_menu([
+                            'theme_location' => 'menu-nerzhaveila',
+                            'menu_class' => 'aside-menu',
+                            'container' => ''
+                          ]);
+                        ?>
+                      </li>
+                      <li><a href="http://delshab/proektnye-raboty/">Проектирование</a></li>
+                  </ul>
                 </aside>
                 
                 <div class="nershaveika-box nershaveika-box--lestnici">
@@ -93,27 +46,32 @@
                         <div class="search__wrapper-filter">
                             Фильтры
                         </div>
-                        <aside class="aside sidebar--mobile">
+                      <aside class="aside sidebar--mobile">
                           <ul>
-                              <li>
-                                  <a href="">Металлические констукции</a>
-                                  <ul class="aside-menu">
-                                      <li ><a href="#">Категория-1</a></li>
-                                      <li><a href="#">Категория-1</a></li>
-                                      <li><a href="#">Категория-1</a></li>
-                                  </ul>
+                            <li>
+                                <a class="aside--active" href="">Металлические конструкции</a>
+                                <?php
+                                    wp_nav_menu([
+                                      'theme_location' => 'menu-metall',
+                                      'menu_class' => 'aside-menu',
+                                      'container' => ''
+                                    ]);
+                                  ?>
                               </li>
                               <li>
-                                  <a class="aside--active" href="">Изделия из нержавейки</a>
-                                  <ul class="aside-menu">
-                                      <li><a href="./perila.html">Перила</a></li>
-                                      <li><a href="./ograshdenia.html">Ограждения</a></li>
-                                      <li><a href="./lestnici.html">Лестницы</a></li>
-                                  </ul>
+                                <a  href="http://delshab/izdeliya-iz-nerzhavejki/">Изделия из нержавейки</a>
+                                    
+                                <?php
+                                  wp_nav_menu([
+                                    'theme_location' => 'menu-nerzhaveila',
+                                    'menu_class' => 'aside-menu',
+                                    'container' => ''
+                                  ]);
+                                ?>
                               </li>
-                              <li><a href="">Проектирование</a></li>
+                              <li><a href="http://delshab/proektnye-raboty/">Проектирование</a></li>
                           </ul>
-                        </aside>
+                      </aside>
                       </div>
                       <div class="metalllest-block">
                         <div class="metalllest-block__item">
@@ -548,55 +506,4 @@
           </div>
         </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-block">
-          <div class="footer-block__item">
-            <a href="#" class="footer-block__item-logo">ЗМК ДЕЛСНАБ</a>
-            <div class="footer-block__item-subtitle">20 лет на рынке</div>
-          </div>
-          <div class="footer-block__item footer-block__item--mobile">
-            <a href="tel:+" class="footer-block__item-phone">+7 495 540 48 55</a>
-            <p class="footer-block__item-address">Мытищи, ул.Силикатная, д.19</p>
-            <a href="maito:delsnab@bk.ru" class="footer-block__item-email">delsnab@bk.ru</a>
-            <a href="#" class="footer-block__item-btn">Задать вопрос</a>
-          </div>
-          <div class="footer-block__item">
-            <ul class="footer__list">
-              <li><a href="#">Наши работы</a></li>
-              <li><a href="#">О нас</a></li>
-              <li><a href="./vacancies.html">Вакансии</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Политика обработки данных</a></li>
-            </ul>
-          </div>
-          <div class="footer-block__item">
-            <ul class="footer__list">
-              <li><a href="#">Металлоконструкции</a></li>
-              <li><a href="#">Проектирование</a></li>
-              <li><a href="#">Изделия из нержавейки</a></li>
-              <li><a href="./map.html">Карта сайта</a></li>
-            </ul>
-          </div>
-          <div class="footer-block__item footer-block__item--hidden">
-            <a href="tel:+" class="footer-block__item-phone">+7 495 540 48 55</a>
-            <p class="footer-block__item-address">Мытищи, ул.Силикатная, д.19</p>
-            <a href="maito:delsnab@bk.ru" class="footer-block__item-email">delsnab@bk.ru</a>
-            <a href="#" class="footer-block__item-btn">Задать вопрос</a>
-          </div>
-        </div>
-        <div class="footer__line"></div>
-        <div class="footer__bottom">
-          <div class="footer__bottom-text">Все права защищены.</div>
-          <div class="footer__bottom-text">© Delsnab 2008-2024</div>
-        </div>
-      </div>
-    </footer>
-  
-
-
-
-  <script src="js/main.min.js"></script>
-</body>
-
-</html>
+<?php get_footer();?>

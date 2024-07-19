@@ -18,7 +18,9 @@
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">Краткое наименование</p>
-                                    <p class="about-content__item-text">ООО «ДЕЛСНАБ»</p>
+                                    <p class="about-content__item-text">
+                                      <?php the_field('kratkoe_naimenovanie');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
@@ -26,31 +28,41 @@
                                     <p class="about-content__item-text">
                                         Основной государственный регистрационный номер
                                     </p>
-                                    <p class="about-content__item-text">5177746132559</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('osnovnoj_gosudarstvennyj_registraczionnyj_nomer');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">ИНН</p>
-                                    <p class="about-content__item-text">7724423074</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('inn');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">КПП</p>
-                                    <p class="about-content__item-text">771501001</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('kpp');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">ОКВЭД</p>
-                                    <p class="about-content__item-text">25.11</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('okved');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">ОКПО</p>
-                                    <p class="about-content__item-text">20022452</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('okpo');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
@@ -59,7 +71,7 @@
                                         Адрес местонахождения в соответствии с учредительными документами
                                     </p>
                                     <p class="about-content__item-text">
-                                        127282 г.Москва, ул.Широкая, д.7, к.2, кв.121
+                                    <?php the_field('adres_mestonahozhdeniya_v_sootvetstvii_s_uchreditelnymi_dokumentami');?>
                                     </p>
                                 </div>
                             </div>
@@ -67,7 +79,7 @@
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">Фактический адрес</p>
                                     <p class="about-content__item-text">
-                                        129338, г. Москва, ул. Вешних Вод, вл.8
+                                    <?php the_field('fakticheskij_adres');?>
                                     </p>
                                 </div>
                             </div>
@@ -75,49 +87,56 @@
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">Расчетный счет</p>
                                     <p class="about-content__item-text">
-                                        40702810035100000108 в ФИЛИАЛ № 7701 БАНКА ВТБ (ПАО) г.Москва
+                                    <?php the_field('raschetnyj_schet');?>
                                     </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">Корреспондентский счет</p>
-                                    <p class="about-content__item-text">30101810345250000745</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('bik');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">БИК</p>
-                                    <p class="about-content__item-text">044525745</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('telefony');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">Телефоны</p>
                                     <p class="about-content__item-text">
-                                        8-985-233-58-51
-                                        8-495-540-48-55
+                                    <?php the_field('telefony');?>
                                     </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">WWW</p>
-                                    <p class="about-content__item-text">delsnab.ru</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('www');?>
+                                    </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">E-mail</p>
                                     <p class="about-content__item-text">
-                                        delsnab@bk.ru 
-                                        tr@delsnab.ru</p>
+                                    <?php the_field('e-mail');?>
+                                      </p>
                                 </div>
                             </div>
                             <div class="about-content__requisites">
                                 <div class="about-content__item">
                                     <p class="about-content__item-text">ФИО генерального директора</p>
-                                    <p class="about-content__item-text">Рожков Александр Тимурович</p>
+                                    <p class="about-content__item-text">
+                                    <?php the_field('fio_generalnogo_direktora');?>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +168,7 @@
                                 </div>
                                <button class="are-wrapper__form-btn btn">Получить КП</button>
                               </div>
-                             <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
+                             <img src="<?php echo get_template_directory_uri()?>/assets/images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                             </div>
                           </div>
                     </div>
@@ -160,70 +179,39 @@
         </section> 
     
         
-      <section class="customers-slider">
-        <div class="container">
-          <h3 class="customers-slider__title title">Наши заказчики</h3>
-        </div>
-        
-        <div class="customers-slider__box">
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-1.jpg" alt="img">
-            </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-2.jpg" alt="img">
-            </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-3.jpg" alt="img">
-            </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-4.jpg" alt="img">
-            </div>
+        <section class="customers-slider">
+          <div class="container">
+            <h3 class="customers-slider__title title">Наши заказчики</h3>
           </div>
           
-           
-          
-        </div>
+          <div class="customers-slider__box">
+            <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+            <div class="customers-slider__wrapper">
+              <div class="customers-slider__item">
+                <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
+              </div>
+            </div> 
+            <?php endwhile; endif;?>
+          </div>
 
-        <div class="customers-slider__mobile">
-          
-            <div class="customers-slider__box--mobile">
+          <div class="customers-slider__mobile">
+              <div class="customers-slider__box--mobile">
+                <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
               <div class="customers-slider__wrapper">
                 <div class="customers-slider__item">
-                  <img src="./images/home/customers-1.jpg" alt="img">
+                  <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
                 </div>
+              </div> 
+              <?php endwhile; endif;?>
               </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-4.jpg" alt="img">
-                </div>
-              </div>
-            </div>
-         
-        </div>
+          </div>
 
-        <div class="container">
-          <div class="customers-slider__arrows"></div>
-        </div>
-        <div class="container">
-          <div class="customers-slider__arrows--mobile"></div>
-        </div>
-      </section>
+          <div class="container">
+            <div class="customers-slider__arrows"></div>
+          </div>
+          <div class="container">
+            <div class="customers-slider__arrows--mobile"></div>
+          </div>
+        </section>
     </main>
 <?php get_footer();?>

@@ -4,6 +4,7 @@
  */
 ?>
 <?php get_header();?>
+
     <main class="main">
       <div class="heading">
         <div class="container">
@@ -78,136 +79,48 @@
           
         
         <div class="manufacturer-slider__box">
+          <?php if(have_rows('slajder_postavki_kartochka')) : while(have_rows('slajder_postavki_kartochka')): the_row()?>
           <div class="manufacturer-slider__wrapper">
             <div class="manufacturer-slider__item">
-              <img src="./images/home/manufacturer-1.jpg" alt="" class="manufacturer-slider__box-img">
-              <div class="manufacturer-slider__box-title">Металлические лестницы</div>
+              <img src="<?php the_sub_field('slajder_postavki_kartochka_kartinka');?>" class="manufacturer-slider__box-img">
+              <div class="manufacturer-slider__box-title">
+              <?php the_sub_field('slajder_postavki_kartochka_zagolovok');?>
+              </div>
               <ul class="manufacturer-slider__list">
-                <li class="manufacturer-slider__list-item">лестницы на косоурах</li>
-                <li class="manufacturer-slider__list-item">лестницы на тетивах</li>
-                <li class="manufacturer-slider__list-item">каркасы лестниц</li>
-                <li class="manufacturer-slider__list-item">лестницы винтовые</li>
+                <?php if(have_rows('slajder_postavki_kartochka_spisok')) : while(have_rows('slajder_postavki_kartochka_spisok')): the_row()?>
+                <li class="manufacturer-slider__list-item">
+                <?php the_sub_field('slajder_postavki_kartochka_spisok_tekst');?>
+                </li>
+                <?php endwhile; endif;?>
               </ul>
-              <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
+              <a href="<?php the_sub_field('slajder_postavki_kartochka_ssylka');?>" class="manufacturer-slider__box-btn btn">Подробнее</a>
             </div>
           </div>
-          <div class="manufacturer-slider__wrapper">
-            <div class="manufacturer-slider__item">
-              <img src="./images/home/manufacturer-2.jpg" alt="" class="manufacturer-slider__box-img">
-              <div class="manufacturer-slider__box-title">Пожарные лестницы</div>
-              <ul class="manufacturer-slider__list">
-                <li class="manufacturer-slider__list-item">П1 вертикальные</li>
-                <li class="manufacturer-slider__list-item"> П2 эвакуационные (тип 3)</li>
-                <li class="manufacturer-slider__list-item">маршевые пожарные</li>
-              </ul>
-              <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-            </div>
-          </div>
-          <div class="manufacturer-slider__wrapper">
-            <div class="manufacturer-slider__item">
-              <img src="./images/home/manufacturer-3.jpg" alt="" class="manufacturer-slider__box-img">
-              <div class="manufacturer-slider__box-title">Металлокаркасы</div>
-              <ul class="manufacturer-slider__list">
-                <li class="manufacturer-slider__list-item">здания из м.конструкций</li>
-                <li class="manufacturer-slider__list-item">конструкции по чертежам</li>
-                <li class="manufacturer-slider__list-item">каркасы легкий построек</li>
-              </ul>
-              <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-            </div>
-          </div>
-          <div class="manufacturer-slider__wrapper">
-            <div class="manufacturer-slider__item">
-              <img src="./images/home/manufacturer-1.jpg" alt="" class="manufacturer-slider__box-img">
-              <div class="manufacturer-slider__box-title">Закладные детали</div>
-              <ul class="manufacturer-slider__list">
-                <li class="manufacturer-slider__list-item">арматурные каркасы</li>
-              </ul>
-              <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-            </div>
-          </div>
-          <div class="manufacturer-slider__wrapper">
-            <div class="manufacturer-slider__item">
-              <img src="./images/home/manufacturer-1.jpg" alt="" class="manufacturer-slider__box-img">
-              <div class="manufacturer-slider__box-title">Металлические лестницы</div>
-              <ul class="manufacturer-slider__list">
-                <li class="manufacturer-slider__list-item">лестницы на косоурах</li>
-                <li class="manufacturer-slider__list-item">лестницы на тетивах</li>
-                <li class="manufacturer-slider__list-item">каркасы лестниц</li>
-                <li class="manufacturer-slider__list-item">лестницы винтовые</li>
-              </ul>
-              <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-            </div>
-          </div>
+         <?php endwhile; endif;?>
         </div>
 
         <div class="manufacturer-slider__mobile">
-        
-            <div class="manufacturer-slider__box--mobile">
+          <div class="manufacturer-slider__box--mobile">
+            <?php if(have_rows('slajder_postavki_kartochka')) : while(have_rows('slajder_postavki_kartochka')): the_row()?>
               <div class="manufacturer-slider__wrapper">
                 <div class="manufacturer-slider__item">
-                  <img src="./images/home/manufacturer-1.jpg" alt="" class="manufacturer-slider__box-img">
-                  <div class="manufacturer-slider__box-title">Металлические лестницы</div>
+                  <img src="<?php the_sub_field('slajder_postavki_kartochka_kartinka');?>" class="manufacturer-slider__box-img" alt="img">
+                  <div class="manufacturer-slider__box-title">
+                  <?php the_sub_field('slajder_postavki_kartochka_zagolovok');?>
+                  </div>
                   <ul class="manufacturer-slider__list">
-                    <li class="manufacturer-slider__list-item">лестницы на косоурах</li>
-                    <li class="manufacturer-slider__list-item">лестницы на тетивах</li>
-                    <li class="manufacturer-slider__list-item">каркасы лестниц</li>
-                    <li class="manufacturer-slider__list-item">лестницы винтовые</li>
+                    <?php if(have_rows('slajder_postavki_kartochka_spisok')) : while(have_rows('slajder_postavki_kartochka_spisok')): the_row()?>
+                    <li class="manufacturer-slider__list-item">
+                    <?php the_sub_field('slajder_postavki_kartochka_spisok_tekst');?>
+                    </li>
+                    <?php endwhile; endif;?>
                   </ul>
-                  <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
+                  <a href="<?php the_sub_field('slajder_postavki_kartochka_ssylka');?>" class="manufacturer-slider__box-btn btn">Подробнее</a>
                 </div>
               </div>
-              <div class="manufacturer-slider__wrapper">
-                <div class="manufacturer-slider__item">
-                  <img src="./images/home/manufacturer-2.jpg" alt="" class="manufacturer-slider__box-img">
-                  <div class="manufacturer-slider__box-title">Пожарные лестницы</div>
-                  <ul class="manufacturer-slider__list">
-                    <li class="manufacturer-slider__list-item">П1 вертикальные</li>
-                    <li class="manufacturer-slider__list-item"> П2 эвакуационные (тип 3)</li>
-                    <li class="manufacturer-slider__list-item">маршевые пожарные</li>
-                  </ul>
-                  <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-                </div>
-              </div>
-              <div class="manufacturer-slider__wrapper">
-                <div class="manufacturer-slider__item">
-                  <img src="./images/home/manufacturer-3.jpg" alt="" class="manufacturer-slider__box-img">
-                  <div class="manufacturer-slider__box-title">Металлокаркасы</div>
-                  <ul class="manufacturer-slider__list">
-                    <li class="manufacturer-slider__list-item">здания из м.конструкций</li>
-                    <li class="manufacturer-slider__list-item">конструкции по чертежам</li>
-                    <li class="manufacturer-slider__list-item">каркасы легкий построек</li>
-                  </ul>
-                  <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-                </div>
-              </div>
-              <div class="manufacturer-slider__wrapper">
-                <div class="manufacturer-slider__item">
-                  <img src="./images/home/manufacturer-1.jpg" alt="" class="manufacturer-slider__box-img">
-                  <div class="manufacturer-slider__box-title">Закладные детали</div>
-                  <ul class="manufacturer-slider__list">
-                    <li class="manufacturer-slider__list-item">арматурные каркасы</li>
-                  </ul>
-                  <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-                </div>
-              </div>
-              <div class="manufacturer-slider__wrapper">
-                <div class="manufacturer-slider__item">
-                  <img src="./images/home/manufacturer-1.jpg" alt="" class="manufacturer-slider__box-img">
-                  <div class="manufacturer-slider__box-title">Металлические лестницы</div>
-                  <ul class="manufacturer-slider__list">
-                    <li class="manufacturer-slider__list-item">лестницы на косоурах</li>
-                    <li class="manufacturer-slider__list-item">лестницы на тетивах</li>
-                    <li class="manufacturer-slider__list-item">каркасы лестниц</li>
-                    <li class="manufacturer-slider__list-item">лестницы винтовые</li>
-                  </ul>
-                  <a href="#" class="manufacturer-slider__box-btn btn">Подробнее</a>
-                </div>
-              </div>
-            </div>
-         
+            <?php endwhile; endif;?>
+          </div>
         </div>
-       
-
 
         <div class="container">
           <div class="manufacturer-slider__arrows"></div>
@@ -260,7 +173,7 @@
                     </div>
                    <button class="are-wrapper__form-btn btn">Получить КП</button>
                   </div>
-                 <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
+                 <img src="<?php echo get_template_directory_uri()?>/assets/images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                 </div>
               </div>
             </div>
@@ -274,56 +187,25 @@
         </div>
         
         <div class="customers-slider__box">
+           <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
           <div class="customers-slider__wrapper">
             <div class="customers-slider__item">
-              <img src="./images/home/customers-1.jpg" alt="img">
+              <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
             </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-2.jpg" alt="img">
-            </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-3.jpg" alt="img">
-            </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-4.jpg" alt="img">
-            </div>
-          </div>
-          
-           
-          
+          </div> 
+          <?php endwhile; endif;?>
         </div>
 
         <div class="customers-slider__mobile">
-          
             <div class="customers-slider__box--mobile">
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-1.jpg" alt="img">
-                </div>
+              <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+            <div class="customers-slider__wrapper">
+              <div class="customers-slider__item">
+                <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
               </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-4.jpg" alt="img">
-                </div>
-              </div>
+            </div> 
+            <?php endwhile; endif;?>
             </div>
-         
         </div>
 
         <div class="container">
@@ -340,67 +222,31 @@
         </div>
 
         <div class="portfolio-slider__box">
+          <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
           <div class="portfolio-slider__wrapper">
             <div class="portfolio-slider__item">
-              <img src="./images/home/portfolio-1.jpg" alt="img" class="portfolio-slider__item-img">
-              <div class="portfolio-slider__item-text">Металлические лестницы</div>
-            </div>
-          </div>
-          <div class="portfolio-slider__wrapper">
-            <div class="portfolio-slider__item">
-              <img src="./images/home/portfolio-2.jpg" alt="img" class="portfolio-slider__item-img">
-              <div class="portfolio-slider__item-text">пожарные лестницы</div>
-            </div>
-          </div>
-           
-
-            <div class="portfolio-slider__wrapper">
-              <div class="portfolio-slider__item">
-                <img src="./images/home/portfolio-3.jpg" alt="img" class="portfolio-slider__item-img">
-                <div class="portfolio-slider__item-text">Металлокаркасы</div>
+              <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+              <div class="portfolio-slider__item-text">
+              <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
               </div>
             </div>
-           
-            <div class="portfolio-slider__wrapper">
-              <div class="portfolio-slider__item">
-                <img src="./images/home/portfolio-2.jpg" alt="img" class="portfolio-slider__item-img">
-                <div class="portfolio-slider__item-text">закладные детали</div>
-              </div>
-            </div>
+          </div>
+          <?php endwhile; endif;?>
         </div>
 
         <div class="portfolio-slider__mobile">
-           
               <div class="portfolio-slider__box--mobile">
+                <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
                 <div class="portfolio-slider__wrapper">
                   <div class="portfolio-slider__item">
-                    <img src="./images/home/portfolio-1.jpg" alt="img" class="portfolio-slider__item-img">
-                    <div class="portfolio-slider__item-text">Металлические лестницы</div>
-                  </div>
-                </div>
-                <div class="portfolio-slider__wrapper">
-                  <div class="portfolio-slider__item">
-                    <img src="./images/home/portfolio-2.jpg" alt="img" class="portfolio-slider__item-img">
-                    <div class="portfolio-slider__item-text">Пожарные лестницы</div>
-                  </div>
-                </div>
-                 
-      
-                  <div class="portfolio-slider__wrapper">
-                    <div class="portfolio-slider__item">
-                      <img src="./images/home/portfolio-3.jpg" alt="img" class="portfolio-slider__item-img">
-                      <div class="portfolio-slider__item-text">Металлокаркасы</div>
+                    <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                    <div class="portfolio-slider__item-text">
+                    <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
                     </div>
                   </div>
-                 
-                  <div class="portfolio-slider__wrapper">
-                    <div class="portfolio-slider__item">
-                      <img src="./images/home/portfolio-2.jpg" alt="img" class="portfolio-slider__item-img">
-                      <div class="portfolio-slider__item-text">закладные детали</div>
-                    </div>
-                  </div>
+                </div>
+                <?php endwhile; endif;?>
               </div>
-           
         </div>
 
         <div class="container">
@@ -435,9 +281,9 @@
               </div>
               <div class="about-home__info">
                 <div class="about-home__info-img">
-                  <img class="about-home__info-img--img"  src="./images/home/play-bg.jpg" alt="img">
-                  <a href="#" class="about-home__info-play">
-                    <img src="./images/home/bg-arrows-play.svg" alt="img">
+                  <img class="about-home__info-img--img"  src="<?php echo get_template_directory_uri();?>/assets/images/home/play-bg.jpg" alt="img">
+                  <a href="<?php the_field('video_ssylka');?>" class="about-home__info-play">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/home/bg-arrows-play.svg" alt="img">
                   </a>
                 </div>
                
@@ -471,58 +317,24 @@
         </div>
         
         <div class="certificates-slider__box">
+          <?php if(have_rows('slajder_sertifikaty_kartochka')) : while(have_rows('slajder_sertifikaty_kartochka')): the_row()?>
           <div class="certificates-slider__wrapper">
             <div class="certificates-slider__item">
-              <img src="./images/home/certificate-1.jpg" alt="img">
+              <img src="<?php the_sub_field('slajder_sertifikaty_kartochka_kartinka');?>" alt="img">
             </div>
           </div>
-          <div class="certificates-slider__wrapper">
-            <div class="certificates-slider__item">
-              <img src="./images/home/certificate-2.jpg" alt="img">
-            </div>
-          </div>
-          <div class="certificates-slider__wrapper">
-            <div class="certificates-slider__item">
-              <img src="./images/home/certificate-3.jpg" alt="img">
-            </div>
-          </div>
-          <div class="certificates-slider__wrapper">
-            <div class="certificates-slider__item">
-              <img src="./images/home/certificate-2.jpg" alt="img">
-            </div>
-          </div>
-          
-          
+          <?php endwhile; endif;?>
         </div>
-
+         
         <div class="certificates-slider__mobile">
           <div class="certificates-slider__box--mobile">
+            <?php if(have_rows('slajder_sertifikaty_kartochka')) : while(have_rows('slajder_sertifikaty_kartochka')): the_row()?>
             <div class="certificates-slider__wrapper">
               <div class="certificates-slider__item">
-                <img src="./images/home/certificate-1.jpg" alt="img">
+                <img src="<?php the_sub_field('slajder_sertifikaty_kartochka_kartinka');?>" alt="img">
               </div>
             </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-2.jpg" alt="img">
-              </div>
-            </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-3.jpg" alt="img">
-              </div>
-            </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-2.jpg" alt="img">
-              </div>
-            </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-3.jpg" alt="img">
-              </div>
-            </div>
-            
+            <?php endwhile; endif;?>
           </div>
         </div>
 
@@ -538,95 +350,41 @@
         <div class="container">
           <div class="accardion-block">
             <h3 class="accardion-block__title title">Новости</h3>
+            <?php
+            global $post;
+            $news = new WP_Query([
+                        'post_type' => 'news',
+                        'posts_per_page' => '',
+            ])
+            ?>
             <div class="questions-accardion">
+              <?php if($news->have_posts('news')) : while($news->have_posts('news')): $news->the_post();?>
               <div class="questions__wrapper">
                 <div class="questions-accardion__btn">
                   <span class="questions-accardion__title title">
-                    Акция! Пожарные испытания БЕСПЛАТНО
+                   <?php the_title();?>
                   </span>
-                  <span class="questions-accardion__date">29 августа</span>
+                  <span class="questions-accardion__date">
+                    <?php echo get_the_date();?>
+                  </span>
                 </div>
                 <div class="questions-accardion__content">
                   <div class="questions-accardion__info">
                     <div class="questions-accardion__left">
-                      <img src="./images/home/accardion-img.jpg" alt="img" class="questions-accardion__left-img">
-                      <a href="#" class="questions-accardion__left-link">Полная статья</a>
+                      <img src="<?php the_post_thumbnail_url()?>" alt="img" class="questions-accardion__left-img">
+                      <a href="<?php //the_permalink();?>" class="questions-accardion__left-link">Полная статья</a>
                     </div>
                     <div class="questions-accardion__right">
                       <p>
-                        Для своих клиентов, заказавших изготовление и монтаж пожарных и эвакуационных лестниц, компания проводит БЕСПЛАТНЫЕ ПОЖАРНЫЕ ИСПЫТАНИЯ
+                        <?php the_excerpt();?>
                       </p>
-                      <p>
-                        Пожарные и эвакуационные лестницы, а также ограждения кровли - неотъемлемые и необходимые элементы здания, призванные обеспечить безопасность людей при эвакуации. Поэтому они должны находится в исправном состоянии, соответствовать СНИП и не реже 1 раза в 5 лет проходить проверку на соответствие ГОСТ 53254.
-                      </p>
-                      <p>
-                        Для своих клиентов, заказавших изготовление и монтаж пожарных и эвакуационных лестниц, компания проводит БЕСПЛАТНЫЕ ПОЖАРНЫЕ ИСПЫТАНИЯ с предоставлением всех необходимых документов:- Протокол испытаний- Заключение о соответствии ГОСТ Р 53254- Заверенная копия Лицензии МЧС
-                        Наши специалисты являются профессионалами своего дела и используют только сертифицированное современное оборудование.
-                      </p>
+                     
                     </div>
                    
                   </div>
                 </div>
               </div>
-              <div class="questions__wrapper">
-                <div class="questions-accardion__btn">
-                  <span class="questions-accardion__title title">
-                    Особенности построения антресольного этажа
-                  </span>
-                  <span class="questions-accardion__date">13 ноября</span>
-                </div>
-                <div class="questions-accardion__content">
-                  <div class="questions-accardion__info">
-                    <div class="questions-accardion__left">
-                      <img src="./images/home/accardion-img.jpg" alt="img" class="questions-accardion__left-img">
-                      <a href="#" class="questions-accardion__left-link">Полная статья</a>
-                    </div>
-                    <div class="questions-accardion__right">
-                      <p>
-                        Для своих клиентов, заказавших изготовление и монтаж пожарных и эвакуационных лестниц, компания проводит БЕСПЛАТНЫЕ ПОЖАРНЫЕ ИСПЫТАНИЯ
-                      </p>
-                      <p>
-                        Пожарные и эвакуационные лестницы, а также ограждения кровли - неотъемлемые и необходимые элементы здания, призванные обеспечить безопасность людей при эвакуации. Поэтому они должны находится в исправном состоянии, соответствовать СНИП и не реже 1 раза в 5 лет проходить проверку на соответствие ГОСТ 53254.
-                      </p>
-                      <p>
-                        Для своих клиентов, заказавших изготовление и монтаж пожарных и эвакуационных лестниц, компания проводит БЕСПЛАТНЫЕ ПОЖАРНЫЕ ИСПЫТАНИЯ с предоставлением всех необходимых документов:- Протокол испытаний- Заключение о соответствии ГОСТ Р 53254- Заверенная копия Лицензии МЧС
-                        Наши специалисты являются профессионалами своего дела и используют только сертифицированное современное оборудование.
-                      </p>
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
-              <div class="questions__wrapper">
-                <div class="questions-accardion__btn">
-                  <span class="questions-accardion__title title">
-                    Особенности производства лестниц в Москве
-                  </span>
-                  <span class="questions-accardion__date">17 ноября</span>
-                </div>
-                <div class="questions-accardion__content">
-                  <div class="questions-accardion__info">
-                    <div class="questions-accardion__left">
-                      <img src="./images/home/accardion-img.jpg" alt="img" class="questions-accardion__left-img">
-                      <a href="#" class="questions-accardion__left-link">Полная статья</a>
-                    </div>
-                    <div class="questions-accardion__right">
-                      <p>
-                        Для своих клиентов, заказавших изготовление и монтаж пожарных и эвакуационных лестниц, компания проводит БЕСПЛАТНЫЕ ПОЖАРНЫЕ ИСПЫТАНИЯ
-                      </p>
-                      <p>
-                        Пожарные и эвакуационные лестницы, а также ограждения кровли - неотъемлемые и необходимые элементы здания, призванные обеспечить безопасность людей при эвакуации. Поэтому они должны находится в исправном состоянии, соответствовать СНИП и не реже 1 раза в 5 лет проходить проверку на соответствие ГОСТ 53254.
-                      </p>
-                      <p>
-                        Для своих клиентов, заказавших изготовление и монтаж пожарных и эвакуационных лестниц, компания проводит БЕСПЛАТНЫЕ ПОЖАРНЫЕ ИСПЫТАНИЯ с предоставлением всех необходимых документов:- Протокол испытаний- Заключение о соответствии ГОСТ Р 53254- Заверенная копия Лицензии МЧС
-                        Наши специалисты являются профессионалами своего дела и используют только сертифицированное современное оборудование.
-                      </p>
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
-            
+              <?php endwhile; endif;?>
             </div>
           </div>
         </div>
@@ -640,7 +398,7 @@
               <div class="stages-box__item">
                 <div class="stages-box__item-number">01</div>
                 <div class="stages-box__item-img">
-                  <img src="./images/home/crug.svg" alt="img">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/images/home/crug.svg" alt="img">
                 </div>
                
                 <div class="stages-box__item-title">ОБРАЩЕНИЕ КЛИЕНТА</div>
@@ -651,7 +409,7 @@
               <div class="stages-box__item">
                 <div class="stages-box__item-number">02</div>
                 <div class="stages-box__item-img">
-                  <img src="./images/home/crug.svg" alt="img">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/images/home/crug.svg" alt="img">
                 </div>
                 <div class="stages-box__item-title">наша консультация</div>
                 <div class="stages-box__item-text">
@@ -661,7 +419,7 @@
               <div class="stages-box__item">
                 <div class="stages-box__item-number">03</div>
                 <div class="stages-box__item-img">
-                  <img src="./images/home/crug.svg" alt="img">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/images/home/crug.svg" alt="img">
                 </div>
                 <div class="stages-box__item-title">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</div>
                 <div class="stages-box__item-text">
@@ -671,7 +429,7 @@
               <div class="stages-box__item">
                 <div class="stages-box__item-number">04</div>
                 <div class="stages-box__item-img">
-                  <img src="./images/home/crug.svg" alt="img">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/images/home/crug.svg" alt="img">
                 </div>
                 <div class="stages-box__item-title">ЗАПУСК В РАБОТУ</div>
                 <div class="stages-box__item-text">
@@ -682,7 +440,7 @@
               <div class="stages-box__item">
                 <div class="stages-box__item-number">05</div>
                 <div class="stages-box__item-img">
-                  <img src="./images/home/crug.svg" alt="img">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/images/home/crug.svg" alt="img">
                 </div>
                 <div class="stages-box__item-title">ЗАКРЫТИЕ ПРОЕКТА</div>
                 <div class="stages-box__item-text">
@@ -706,21 +464,21 @@
               <div class="feedback-block__contact">
                 <a href="tel:+74955404855" class="feedback-block__item">
                   <div class="feedback-block__item-img">
-                    <img src="./images/home/home-phone-icon.svg" alt="img">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/home/home-phone-icon.svg" alt="img">
                    
                   </div>
                   <p>+7 495 540 48 55</p>
                 </a>
                 <div class="feedback-block__item">
                   <div class="feedback-block__item-img">
-                    <img src="./images/home/home-address-icon.svg" alt="img">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/home/home-address-icon.svg" alt="img">
                   </div>
                   
                   <p>г. Москва, ул. Вешних Вод, 4с79</p>
                 </div>
                 <a href="maito:Delsnab@bk.ru" class="feedback-block__item">
                   <div class="feedback-block__item-img">
-                    <img src="./images/home/home-email-icon.svg" alt="img">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/home/home-email-icon.svg" alt="img">
                   </div>
                   
                   <p>Delsnab@bk.ru</p>

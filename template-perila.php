@@ -31,7 +31,7 @@
                                   ]);
                               ?>
                           </li>
-                          <li><a href="">Проектирование</a></li>
+                          <li><a href="http://delshab/proektnye-raboty/">Проектирование</a></li>
                     </ul>
                 </aside>
                 
@@ -65,7 +65,7 @@
                                             ]);
                                         ?>
                                     </li>
-                                <li><a href="">Проектирование</a></li>
+                                <li><a href="http://delshab/proektnye-raboty/">Проектирование</a></li>
                             </ul>
                           </aside>
                         </div>
