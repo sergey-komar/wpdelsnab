@@ -140,7 +140,7 @@
                                 </div>
                                 <button class="are-wrapper__form-btn btn">Рассчитать</button>
                                 </div>
-                                <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
+                                <img src="<?php echo get_template_directory_uri()?>/assets/images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                             </div>
                             </div>
                     </div>
@@ -150,143 +150,80 @@
             </div>
         </section>
 
-        <section class="certificates-slider certificates-slider--page">
-            <div class="container">
-              <h3 class="certificates-slider__title title">наши работы</h3>
-            </div>
-            
-            <div class="certificates-slider__box">
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/lestnici/lestnica-1.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/lestnici/lestnica-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/lestnici/lestnica-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/lestnici/lestnica-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/lestnici/lestnica-1.jpg" alt="img">
-                </div>
-              </div>
-              
-            </div>
-    
-            <div class="certificates-slider__mobile">
-              <div class="certificates-slider__box--mobile">
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/lestnici/lestnica-1.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/lestnici/lestnica-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/lestnici/lestnica-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/lestnici/lestnica-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/lestnici/lestnica-1.jpg" alt="img">
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-    
-            <div class="container">
-              <div class="certificates-slider__arrows"></div>
-            </div>
-            <div class="container">
-              <div class="certificates-slider__arrows--mobile"></div>
-            </div>
-          </section>
+        <section class="portfolio-slider">
+          <div class="container">
+            <h3 class="portfolio-slider__title title">Наши работы</h3>
+          </div>
 
-          <section class="customers-slider">
-            <div class="container">
-              <h3 class="customers-slider__title title">Наши заказчики</h3>
+          <div class="portfolio-slider__box">
+            <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+            <div class="portfolio-slider__wrapper">
+              <div class="portfolio-slider__item">
+                <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                <div class="portfolio-slider__item-text">
+                <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
+                </div>
+              </div>
             </div>
-            
-            <div class="customers-slider__box">
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-1.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-4.jpg" alt="img">
-                </div>
-              </div>
-              
-               
-              
-            </div>
-    
-            <div class="customers-slider__mobile">
-              <div class="container">
-                <div class="customers-slider__box--mobile">
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-1.jpg" alt="img">
+            <?php endwhile; endif;?>
+          </div>
+
+          <div class="portfolio-slider__mobile">
+                <div class="portfolio-slider__box--mobile">
+                  <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+                  <div class="portfolio-slider__wrapper">
+                    <div class="portfolio-slider__item">
+                      <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                      <div class="portfolio-slider__item-text">
+                      <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
+                      </div>
                     </div>
                   </div>
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-2.jpg" alt="img">
-                    </div>
-                  </div>
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-3.jpg" alt="img">
-                    </div>
-                  </div>
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-4.jpg" alt="img">
-                    </div>
-                  </div>
+                  <?php endwhile; endif;?>
                 </div>
+          </div>
+
+          <div class="container">
+            <div class="portfolio-slider__arrows"></div>
+          </div>
+          <div class="container">
+            <div class="portfolio-slider__arrows--mobile"></div>
+          </div>
+        </section>
+
+        <section class="customers-slider">
+          <div class="container">
+            <h3 class="customers-slider__title title">Наши заказчики</h3>
+          </div>
+          
+          <div class="customers-slider__box">
+            <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+            <div class="customers-slider__wrapper">
+              <div class="customers-slider__item">
+                <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
               </div>
-            </div>
-    
-            <div class="container">
-              <div class="customers-slider__arrows"></div>
-            </div>
-            <div class="container">
-              <div class="customers-slider__arrows--mobile"></div>
-            </div>
-          </section>
+            </div> 
+            <?php endwhile; endif;?>
+          </div>
+
+          <div class="customers-slider__mobile">
+              <div class="customers-slider__box--mobile">
+                <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+              <div class="customers-slider__wrapper">
+                <div class="customers-slider__item">
+                  <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
+                </div>
+              </div> 
+              <?php endwhile; endif;?>
+              </div>
+          </div>
+
+          <div class="container">
+            <div class="customers-slider__arrows"></div>
+          </div>
+          <div class="container">
+            <div class="customers-slider__arrows--mobile"></div>
+          </div>
+        </section>
     </main>
 <?php get_footer();?>

@@ -129,27 +129,17 @@
             <div class="vacancies-block">
                 <h3 class="vacancies-block__title title">Мы делаем</h3>
                 <div class="vacancies-block__content">
-                    <a href="#" class="vacancies-block__item">
-                        <img src="./images/nershaveika/nershaveika-1.jpg" alt="img" class="vacancies-block__item-img">
-                        <div class="vacancies-block__item-title">Перила</div>
+                    <?php if(have_rows('nerzhavejka_kategorii_kartochka')) : while(have_rows('nerzhavejka_kategorii_kartochka')): the_row()?>
+                    <a href="<?php the_sub_field('nerzhavejka_kategorii_kartochka_ssylka');?>" class="vacancies-block__item">
+                        <img src="<?php the_sub_field('nerzhavejka_kategorii_kartochka_kartinka');?>" alt="img" class="vacancies-block__item-img">
+                        <div class="vacancies-block__item-title">
+                        <?php the_sub_field('nerzhavejka_kategorii_kartochka_zagolovok');?>
+                        </div>
                         <div class="vacancies-block__item-text">
-                            Перила из нержавеющей стали - купить перила из нержавейки в Москве
+                        <?php the_sub_field('nerzhavejka_kategorii_kartochka_tekst');?>
                         </div>
                     </a>
-                    <a href="#" class="vacancies-block__item">
-                        <img src="./images/nershaveika/nershaveika-2.jpg" alt="img" class="vacancies-block__item-img">
-                        <div class="vacancies-block__item-title">Ограждения</div>
-                        <div class="vacancies-block__item-text">
-                            Ограждения из нержавеющей стали: купить в Москве по цене изготовителя
-                        </div>
-                    </a>
-                    <a href="#" class="vacancies-block__item">
-                        <img src="./images/nershaveika/nershaveika-3.jpg" alt="img" class="vacancies-block__item-img">
-                        <div class="vacancies-block__item-title">Лестницы</div>
-                        <div class="vacancies-block__item-text">
-                            Лестницы из нержавеющей стали - производство в Москве
-                        </div>
-                    </a>
+                    <?php endwhile; endif;?>
                 </div>
             </div>
         </div>
@@ -180,7 +170,7 @@
                                 </div>
                                 <button class="are-wrapper__form-btn btn">Рассчитать</button>
                                 </div>
-                                <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
+                                <img src="<?php echo get_template_directory_uri()?>/assets/images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                             </div>
                             </div>
                     </div>
@@ -190,76 +180,45 @@
             </div>
         </section>
 
-        <section class="certificates-slider certificates-slider--page">
+
+          <section class="portfolio-slider">
             <div class="container">
-              <h3 class="certificates-slider__title title">наши работы</h3>
+              <h3 class="portfolio-slider__title title">Наши работы</h3>
             </div>
-            
-            <div class="certificates-slider__box">
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/nershaveika/nershaveika-slider-1.jpg" alt="img">
+
+            <div class="portfolio-slider__box">
+              <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+              <div class="portfolio-slider__wrapper">
+                <div class="portfolio-slider__item">
+                  <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                  <div class="portfolio-slider__item-text">
+                  <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
+                  </div>
                 </div>
               </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/nershaveika/nershaveika-slider-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/nershaveika/nershaveika-slider-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/nershaveika/nershaveika-slider-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/nershaveika/nershaveika-slider-1.jpg" alt="img">
-                </div>
-              </div>
-              
+              <?php endwhile; endif;?>
             </div>
-    
-            <div class="certificates-slider__mobile">
-              <div class="certificates-slider__box--mobile">
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/nershaveika/nershaveika-slider-1.jpg" alt="img">
+
+            <div class="portfolio-slider__mobile">
+                  <div class="portfolio-slider__box--mobile">
+                    <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+                    <div class="portfolio-slider__wrapper">
+                      <div class="portfolio-slider__item">
+                        <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                        <div class="portfolio-slider__item-text">
+                        <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
+                        </div>
+                      </div>
+                    </div>
+                    <?php endwhile; endif;?>
                   </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/nershaveika/nershaveika-slider-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/nershaveika/nershaveika-slider-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/nershaveika/nershaveika-slider-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/nershaveika/nershaveika-slider-3.jpg" alt="img">
-                  </div>
-                </div>
-                
-              </div>
             </div>
-    
+
             <div class="container">
-              <div class="certificates-slider__arrows"></div>
+              <div class="portfolio-slider__arrows"></div>
             </div>
             <div class="container">
-              <div class="certificates-slider__arrows--mobile"></div>
+              <div class="portfolio-slider__arrows--mobile"></div>
             </div>
           </section>
 
@@ -269,58 +228,27 @@
             </div>
             
             <div class="customers-slider__box">
+              <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
               <div class="customers-slider__wrapper">
                 <div class="customers-slider__item">
-                  <img src="./images/home/customers-1.jpg" alt="img">
+                  <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
                 </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-4.jpg" alt="img">
-                </div>
-              </div>
-              
-               
-              
+              </div> 
+              <?php endwhile; endif;?>
             </div>
-    
+
             <div class="customers-slider__mobile">
-              <div class="container">
                 <div class="customers-slider__box--mobile">
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-1.jpg" alt="img">
-                    </div>
+                  <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+                <div class="customers-slider__wrapper">
+                  <div class="customers-slider__item">
+                    <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
                   </div>
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-2.jpg" alt="img">
-                    </div>
-                  </div>
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-3.jpg" alt="img">
-                    </div>
-                  </div>
-                  <div class="customers-slider__wrapper">
-                    <div class="customers-slider__item">
-                      <img src="./images/home/customers-4.jpg" alt="img">
-                    </div>
-                  </div>
+                </div> 
+                <?php endwhile; endif;?>
                 </div>
-              </div>
             </div>
-    
+
             <div class="container">
               <div class="customers-slider__arrows"></div>
             </div>
@@ -328,5 +256,6 @@
               <div class="customers-slider__arrows--mobile"></div>
             </div>
           </section>
+
     </main>
 <?php get_footer();?>
