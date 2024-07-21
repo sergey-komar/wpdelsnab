@@ -5,7 +5,7 @@
 ?>
 <?php get_header();?>
 <main class="main">
-       <section class="nershaveika lestnici">
+        <section class="nershaveika lestnici">
           <div class="container">
             <div class="nershaveika-block">
                 <aside class="aside">
@@ -75,28 +75,21 @@
                      </div>
                    
                       <div class="metalllest-block">
+                       <?php if(have_rows('pozharnye_lestniczy_kartochka')) : while(have_rows('pozharnye_lestniczy_kartochka')): the_row()?>
                         <div class="metalllest-block__item">
-                          <img src="./images/posharnielestnici/posharnielestnici-1.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Лестница П1-1</div>
-                          <div class="metalllest-block__item-text">
-                            Лестница, крепления, площадка, ограждения, мостик.
+                          <img src="<?php the_sub_field('pozharnye_lestniczy_kartochka_kartinka');?>" alt="img" class="metalllest-block__item-img">
+                          <div class="metalllest-block__item-title">
+                          <?php the_sub_field('pozharnye_lestniczy_kartochka_zagolovok');?>
                           </div>
+                          <ul class="metal-box__list">
+                            <?php if(have_rows('pozharnye_lestniczy_spisok')) : while(have_rows('pozharnye_lestniczy_spisok')): the_row()?>
+                              <li class="metal-box__list-item metal-box__list-item--lestnicy">
+                              <?php the_sub_field('pozharnye_lestniczy_spisok_tekst');?>
+                              </li>
+                              <?php endwhile; endif;?>
+                            </ul>
                         </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/posharnielestnici/posharnielestnici-2.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">П2 Эвакуационные (тип 3)</div>
-                          <div class="metalllest-block__item-text">
-                            Пряма маршевая, с площадкой и поворотом, многомаршевая
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/posharnielestnici/posharnielestnici-3.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Пожарная лестница П1-2</div>
-                          <div class="metalllest-block__item-text">
-                            Лестница, дуговое ограждения, крепления, площадка, мостик
-                          </div>
-                        </div>
-                       
+                        <?php endwhile; endif;?>
                       </div>
                    
                   </div>
@@ -216,7 +209,7 @@
                               </div>
                               <button class="are-wrapper__form-btn btn">Рассчитать</button>
                               </div>
-                              <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
+                              <img src="<?php echo get_template_directory_uri();?>/assets/images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                           </div>
                           </div>
                   </div>
@@ -226,77 +219,45 @@
           </div>
         </section>
 
-        <section class="certificates-slider  certificates-slider--page">
-            <div class="container">
-              <h3 class="certificates-slider__title title">наши работы</h3>
-            </div>
-            
-            <div class="certificates-slider__box">
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/posharnielestnici/posharnielestnici-img-1.jpg" alt="img">
+        <section class="portfolio-slider">
+          <div class="container">
+            <h3 class="portfolio-slider__title title">Наши работы</h3>
+          </div>
+
+          <div class="portfolio-slider__box">
+            <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+            <div class="portfolio-slider__wrapper">
+              <div class="portfolio-slider__item">
+                <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                <div class="portfolio-slider__item-text">
+                <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
                 </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/posharnielestnici/posharnielestnici-img-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/posharnielestnici/posharnielestnici-img-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/posharnielestnici/posharnielestnici-img-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/posharnielestnici/posharnielestnici-img-1.jpg" alt="img">
-                </div>
-              </div>
-              
-            </div>
-    
-            <div class="certificates-slider__mobile">
-              <div class="certificates-slider__box--mobile">
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/posharnielestnici/posharnielestnici-img-1.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/posharnielestnici/posharnielestnici-img-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/posharnielestnici/posharnielestnici-img-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/posharnielestnici/posharnielestnici-img-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/posharnielestnici/posharnielestnici-img-1.jpg" alt="img">
-                  </div>
-                </div>
-                
               </div>
             </div>
-    
-            <div class="container">
-              <div class="certificates-slider__arrows"></div>
-            </div>
-            <div class="container">
-              <div class="certificates-slider__arrows--mobile"></div>
-            </div>
+            <?php endwhile; endif;?>
+          </div>
+
+          <div class="portfolio-slider__mobile">
+                <div class="portfolio-slider__box--mobile">
+                  <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+                  <div class="portfolio-slider__wrapper">
+                    <div class="portfolio-slider__item">
+                      <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                      <div class="portfolio-slider__item-text">
+                      <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
+                      </div>
+                    </div>
+                  </div>
+                  <?php endwhile; endif;?>
+                </div>
+          </div>
+
+          <div class="container">
+            <div class="portfolio-slider__arrows"></div>
+          </div>
+          <div class="container">
+            <div class="portfolio-slider__arrows--mobile"></div>
+          </div>
         </section>
 
         <section class="customers-slider">
@@ -305,56 +266,25 @@
           </div>
           
           <div class="customers-slider__box">
+            <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
             <div class="customers-slider__wrapper">
               <div class="customers-slider__item">
-                <img src="./images/home/customers-1.jpg" alt="img">
+                <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
               </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-2.jpg" alt="img">
-              </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-3.jpg" alt="img">
-              </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-4.jpg" alt="img">
-              </div>
-            </div>
-            
-              
-            
+            </div> 
+            <?php endwhile; endif;?>
           </div>
 
           <div class="customers-slider__mobile">
-            <div class="container">
               <div class="customers-slider__box--mobile">
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-1.jpg" alt="img">
-                  </div>
+                <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+              <div class="customers-slider__wrapper">
+                <div class="customers-slider__item">
+                  <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
                 </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-4.jpg" alt="img">
-                  </div>
-                </div>
+              </div> 
+              <?php endwhile; endif;?>
               </div>
-            </div>
           </div>
 
           <div class="container">

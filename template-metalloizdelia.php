@@ -11,7 +11,7 @@
                 <aside class="aside">
                   <ul>
                     <li>
-                        <a class="aside--active" href="">Металлические конструкции</a>
+                        <a class="aside--active" href="http://delshab/metallokonstrukcii/">Металлические конструкции</a>
                         <?php
                             wp_nav_menu([
                               'theme_location' => 'menu-metall',
@@ -34,7 +34,6 @@
                       <li><a href="http://delshab/proektnye-raboty/">Проектирование</a></li>
                   </ul>
                 </aside>
-                
                 <div class="nershaveika-box nershaveika-box--lestnici">
 
                   <div class="metalllest">
@@ -49,7 +48,7 @@
                       <aside class="aside sidebar--mobile">
                           <ul>
                             <li>
-                                <a class="aside--active" href="">Металлические конструкции</a>
+                                <a class="aside--active" href="http://delshab/metallokonstrukcii/">Металлические конструкции</a>
                                 <?php
                                     wp_nav_menu([
                                       'theme_location' => 'menu-metall',
@@ -74,110 +73,21 @@
                       </aside>
                       </div>
                       <div class="metalllest-block">
+                        <?php if(have_rows('kategorii_kartochka')) : while(have_rows('kategorii_kartochka')): the_row()?>
                         <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-1.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Мангалы</div>
-                          <div class="metalllest-block__item-text">
-                            Кованые мангалы купить в Москве по цене производителя
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-2.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Рекламные конструкции</div>
-                          <div class="metalllest-block__item-text">
-                            Металлические рекламные конструкции - изготовление в Москве
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-3.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Архитектурные элементы</div>
-                          <div class="metalllest-block__item-text">
-                            Архитектурные элементы на заказ по доступной цене с доставкой в Москве
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-4.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Мебель из металла</div>
-                          <div class="metalllest-block__item-text">
-                            Купить мебель из металла в Москве. Производство металлической мебели
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-5.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Козырьки</div>
-                          <div class="metalllest-block__item-text">
-                            Металлические козырьки. Купить металлические козырьки в Москве
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-6.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Беседки металлические</div>
-                          <div class="metalllest-block__item-text">
-                            Беседки металлические. Купить металлическую беседку в Москве и области
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-7.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Металлические навесы</div>
-                          <div class="metalllest-block__item-text">
-                            Металлические навесы. Купить металлический навес в Москве и области
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-8.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Решетки</div>
-                          <div class="metalllest-block__item-text">
-                            Изготовление металлических решеток - доступная цена в Москве и области
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-9.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Ворота металлические</div>
-                          <div class="metalllest-block__item-text">
-                            Металлические ворота - купить ворота из металла в Москве
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-8.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Эстакады</div>
-                          <div class="metalllest-block__item-text">
-                            Автоэстакады, передвижные рампы, сооружения для трубопроводов
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-10.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Кованые изделия</div>
-                          <div class="metalllest-block__item-text">
-                            Кованые изделия на заказ купить в Москве по цене производителя
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-8.jpg" alt="img" class="metalllest-block__item-img">
+                          <img src="<?php the_sub_field('kategorii_kartochka_kartinka');?>" alt="img" class="metalllest-block__item-img">
                           <div class="metalllest-block__item-title">
-                            Металлические рамы
+                          <?php the_sub_field('kategorii_kartochka_zagolovok');?>
                           </div>
-                          <div class="metalllest-block__item-text">
-                            Изготовление рам из металла решетчатого, сплошного и двутаврового вида
-                          </div>
+                          <ul class="metal-box__list">
+                            <?php if(have_rows('kategorii_kartochka_spisok')) : while(have_rows('kategorii_kartochka_spisok')): the_row()?>
+                              <li class="metal-box__list-item metal-box__list-item--lestnicy">
+                              <?php the_sub_field('kategorii_kartochka_spisok_tekst');?>
+                              </li>
+                              <?php endwhile; endif;?>
+                            </ul>
                         </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-8.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">
-                            Опоры трубопроводов
-                          </div>
-                          <div class="metalllest-block__item-text">
-                            Стальные опоры под трубопроводы от производителя в Москве и области
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalloizdelia/metalloizdelia-8.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">
-                            Фасонка и пластины
-                          </div>
-                          <div class="metalllest-block__item-text">
-                            Пластины сложной геометрической формы на заказ по доступной цене
-                          </div>
-                        </div>
+                        <?php endwhile; endif;?>
                       </div>
                     
                   </div>
@@ -357,7 +267,7 @@
                               </div>
                               <button class="are-wrapper__form-btn btn">Рассчитать</button>
                               </div>
-                              <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
+                              <img src="<?php echo get_template_directory_uri();?>/assets/images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                           </div>
                           </div>
                   </div>
@@ -367,77 +277,45 @@
           </div>
         </section>
 
-        <section class="certificates-slider certificates-slider--page">
-            <div class="container">
-              <h3 class="certificates-slider__title title">наши работы</h3>
-            </div>
-            
-            <div class="certificates-slider__box">
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalloizdelia/metalloizdelia-img-1.jpg" alt="img">
+        <section class="portfolio-slider">
+          <div class="container">
+            <h3 class="portfolio-slider__title title">Наши работы</h3>
+          </div>
+
+          <div class="portfolio-slider__box">
+            <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+            <div class="portfolio-slider__wrapper">
+              <div class="portfolio-slider__item">
+                <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                <div class="portfolio-slider__item-text">
+                <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
                 </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalloizdelia/metalloizdelia-img-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalloizdelia/metalloizdelia-img-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalloizdelia/metalloizdelia-img-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalloizdelia/metalloizdelia-img-1.jpg" alt="img">
-                </div>
-              </div>
-              
-            </div>
-    
-            <div class="certificates-slider__mobile">
-              <div class="certificates-slider__box--mobile">
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalloizdelia/metalloizdelia-img-1.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalloizdelia/metalloizdelia-img-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalloizdelia/metalloizdelia-img-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalloizdelia/metalloizdelia-img-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalloizdelia/metalloizdelia-img-1.jpg" alt="img">
-                  </div>
-                </div>
-                
               </div>
             </div>
-    
-            <div class="container">
-              <div class="certificates-slider__arrows"></div>
-            </div>
-            <div class="container">
-              <div class="certificates-slider__arrows--mobile"></div>
-            </div>
+            <?php endwhile; endif;?>
+          </div>
+
+          <div class="portfolio-slider__mobile">
+                <div class="portfolio-slider__box--mobile">
+                  <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+                  <div class="portfolio-slider__wrapper">
+                    <div class="portfolio-slider__item">
+                      <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                      <div class="portfolio-slider__item-text">
+                      <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
+                      </div>
+                    </div>
+                  </div>
+                  <?php endwhile; endif;?>
+                </div>
+          </div>
+
+          <div class="container">
+            <div class="portfolio-slider__arrows"></div>
+          </div>
+          <div class="container">
+            <div class="portfolio-slider__arrows--mobile"></div>
+          </div>
         </section>
 
         <section class="customers-slider">
@@ -446,56 +324,25 @@
           </div>
           
           <div class="customers-slider__box">
+            <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
             <div class="customers-slider__wrapper">
               <div class="customers-slider__item">
-                <img src="./images/home/customers-1.jpg" alt="img">
+                <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
               </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-2.jpg" alt="img">
-              </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-3.jpg" alt="img">
-              </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-4.jpg" alt="img">
-              </div>
-            </div>
-            
-              
-            
+            </div> 
+            <?php endwhile; endif;?>
           </div>
 
           <div class="customers-slider__mobile">
-            <div class="container">
               <div class="customers-slider__box--mobile">
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-1.jpg" alt="img">
-                  </div>
+                <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+              <div class="customers-slider__wrapper">
+                <div class="customers-slider__item">
+                  <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
                 </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-4.jpg" alt="img">
-                  </div>
-                </div>
+              </div> 
+              <?php endwhile; endif;?>
               </div>
-            </div>
           </div>
 
           <div class="container">

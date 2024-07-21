@@ -5,7 +5,7 @@
 ?>
 <?php get_header();?>
 <main class="main">
-
+<?php the_content();?>
     <section class="contact">
         <div class="container">
             <div class="contact-block">

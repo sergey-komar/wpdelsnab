@@ -35,6 +35,7 @@
                     </ul>
                 </aside>
                 
+
                 <div class="nershaveika-box nershaveika-box--lestnici">
                   <div class="nershaveika-box__number">
                     <h3 class="nershaveika-box__number-title title">
@@ -72,7 +73,7 @@
                         </ul>
                       </aside>
                     </div>
-                    <img src="./images/metallicheskie/metallicheskie-bg.jpg" alt="img" class="nershaveika-box__img">
+                    <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-bg.jpg" alt="img" class="nershaveika-box__img">
                     <h3 class="nershaveika-box__number-title title">
                       Преимущественной нашей стороной является:
                     </h3>
@@ -121,100 +122,22 @@
                 Металлические констукции
               </h3>
               <div class="metal-box">
+                <?php if(have_rows('metallicheskie_konstrukczii_kartochka')) : while(have_rows('metallicheskie_konstrukczii_kartochka')): the_row()?>
                 <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-1.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Металлические лестницы</div>
+                  <img src="<?php the_sub_field('metallicheskie_konstrukczii_kartochka_kartinka');?>" alt="img" class="metal-box__item-img">
+                  <div class="metal-box__item-text">
+                  <?php the_sub_field('metallicheskie_konstrukczii_kartochka_zagolovok');?>
+                  </div>
                   <ul class="metal-box__list">
-                    <li class="metal-box__list-item">лестницы на косоурах</li>
-                    <li class="metal-box__list-item">лестницы на тетивах</li>
-                    <li class="metal-box__list-item">каркасы лестниц</li>
-                    <li class="metal-box__list-item">лестницы винтовые</li>
-                  </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-2.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Пожарные лестницы</div>
-                  <ul class="metal-box__list">
-                    <li class="metal-box__list-item"> П1 вертикальные</li>
-                    <li class="metal-box__list-item">  П2 эвакуационные (тип 3)</li>
-                    <li class="metal-box__list-item">маршевые пожарные</li></ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-3.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Металлокаркасы</div>
-                  <ul class="metal-box__list">
-                    <li class="metal-box__list-item"> здания из м.конструкций</li>
-                    <li class="metal-box__list-item">конструкции по чертежам</li>
-                    <li class="metal-box__list-item">каркасы легкий построек</li>
-                   </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-4.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Закладные детали</div>
-                  <ul class="metal-box__list">
-                    <li class="metal-box__list-item">арматурные каркасы
+                   <?php if(have_rows('metallicheskie_konstrukczii_spisok')) : while(have_rows('metallicheskie_konstrukczii_spisok')): the_row()?>
+                    <li class="metal-box__list-item">
+                    <?php the_sub_field('metallicheskie_konstrukczii_spisok_tekst');?>
                     </li>
+                    <?php endwhile; endif;?>
                   </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
+                  <a href="<?php the_sub_field('metallicheskie_konstrukczii_kartochka_ssylka');?>" class="metal-box__item-btn">Подробнее</a>
                 </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-5.png" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Лестничные ограждения</div>
-                  <ul class="metal-box__list">
-                  
-                  </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-6.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Металлические фермы</div>
-                  <ul class="metal-box__list">
-                    <li class="metal-box__list-item">Стальные фермы</li>
-                    <li class="metal-box__list-item">Стропильные фермы</li>
-                    <li class="metal-box__list-item">Треугольные фермы</li>
-                    <li class="metal-box__list-item">Односкатные фермы</li>
-                  </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-7.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Ангары, склады</div>
-                  <ul class="metal-box__list">
-                    <li class="metal-box__list-item"> Ангары из сэндвич-панелей</li>
-                    <li class="metal-box__list-item">Каркасные ангары</li>
-                    <li class="metal-box__list-item">Теплые ангары</li>
-                    <li class="metal-box__list-item">Быстровозводимые ангары</li>
-                  </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-8.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Мк для строительства</div>
-                  <ul class="metal-box__list">
-                    <li class="metal-box__list-item">Сварные балки</li>
-                    <li class="metal-box__list-item">Металлические колонны</li>
-                  </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-9.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Защитные конструкции</div>
-                  <ul class="metal-box__list">
-                    
-                  </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
-                <div class="metal-box__item">
-                  <img src="./images/metallicheskie/metallicheskie-10.jpg" alt="img" class="metal-box__item-img">
-                  <div class="metal-box__item-text">Нестандартные конструкции</div>
-                  <ul class="metal-box__list">
-                    
-                  </ul>
-                  <a href="#" class="metal-box__item-btn">Подробнее</a>
-                </div>
+                <?php endwhile; endif;?>
               </div>
             </div>
           </div>
@@ -227,50 +150,50 @@
                 <div class="contact-production__inner">
                   <div class="contact-production__gallery">
                     <div class="contact-production__gallery-img">
-                        <img src="./images/metallicheskie/metallicheskie-img-1.jpg" alt="img">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-1.jpg" alt="img">
                     </div>
                     <div class="contact-production__gallery-img">
-                        <img src="./images/metallicheskie/metallicheskie-img-2.jpg" alt="img">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-2.jpg" alt="img">
                     </div>
                     <div class="contact-production__gallery-img">
-                        <img src="./images/metallicheskie/metallicheskie-img-3.jpg" alt="img" >
+                        <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-3.jpg" alt="img" >
                     </div>
                   </div>
 
                   <div class="metallicheskie-box">
                       <div class="metallicheskie-box__wrapper">
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-4.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-4.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-5.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-5.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-6.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-6.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-7.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-7.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-8.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-8.jpg" alt="img">
                         </div>
                       </div>
 
                       <div class="metallicheskie-box__wrapper metallicheskie-box__wrapper--hidden">
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-4.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-4.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-5.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-5.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-6.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-6.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-7.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-7.jpg" alt="img">
                         </div>
                         <div class="metallicheskie-box__img">
-                          <img src="./images/metallicheskie/metallicheskie-img-8.jpg" alt="img">
+                          <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-8.jpg" alt="img">
                         </div>
                       </div>
                       <button class="metallicheskie-box__wrapper-btn btn">Показать ещё</button>
@@ -309,56 +232,25 @@
         </div>
         
         <div class="customers-slider__box">
+           <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
           <div class="customers-slider__wrapper">
             <div class="customers-slider__item">
-              <img src="./images/home/customers-1.jpg" alt="img">
+              <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
             </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-2.jpg" alt="img">
-            </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-3.jpg" alt="img">
-            </div>
-          </div>
-          <div class="customers-slider__wrapper">
-            <div class="customers-slider__item">
-              <img src="./images/home/customers-4.jpg" alt="img">
-            </div>
-          </div>
-          
-            
-          
+          </div> 
+          <?php endwhile; endif;?>
         </div>
 
         <div class="customers-slider__mobile">
-          <div class="container">
             <div class="customers-slider__box--mobile">
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-1.jpg" alt="img">
-                </div>
+              <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+            <div class="customers-slider__wrapper">
+              <div class="customers-slider__item">
+                <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
               </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="customers-slider__wrapper">
-                <div class="customers-slider__item">
-                  <img src="./images/home/customers-4.jpg" alt="img">
-                </div>
-              </div>
+            </div> 
+            <?php endwhile; endif;?>
             </div>
-          </div>
         </div>
 
         <div class="container">
@@ -392,9 +284,9 @@
               </div>
               <div class="about-home__info">
                 <div class="about-home__info-img">
-                  <img class="about-home__info-img--img" src="./images/home/play-bg.jpg" alt="img">
-                  <a href="#" class="about-home__info-play">
-                    <img src="./images/home/bg-arrows-play.svg" alt="img">
+                  <img class="about-home__info-img--img"  src="<?php echo get_template_directory_uri();?>/assets/images/home/play-bg.jpg" alt="img">
+                  <a href="<?php the_field('video_ssylka');?>" class="about-home__info-play">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/home/bg-arrows-play.svg" alt="img">
                   </a>
                 </div>
                
@@ -427,62 +319,24 @@
         </div>
         
         <div class="certificates-slider__box">
+          <?php if(have_rows('slajder_sertifikaty_kartochka')) : while(have_rows('slajder_sertifikaty_kartochka')): the_row()?>
           <div class="certificates-slider__wrapper">
             <div class="certificates-slider__item">
-              <img src="./images/home/certificate-1.jpg" alt="img">
+              <img src="<?php the_sub_field('slajder_sertifikaty_kartochka_kartinka');?>" alt="img">
             </div>
           </div>
-          <div class="certificates-slider__wrapper">
-            <div class="certificates-slider__item">
-              <img src="./images/home/certificate-2.jpg" alt="img">
-            </div>
-          </div>
-          <div class="certificates-slider__wrapper">
-            <div class="certificates-slider__item">
-              <img src="./images/home/certificate-3.jpg" alt="img">
-            </div>
-          </div>
-          <div class="certificates-slider__wrapper">
-            <div class="certificates-slider__item">
-              <img src="./images/home/certificate-2.jpg" alt="img">
-            </div>
-          </div>
-          <div class="certificates-slider__wrapper">
-            <div class="certificates-slider__item">
-              <img src="./images/home/certificate-3.jpg" alt="img">
-            </div>
-          </div>
-          
+          <?php endwhile; endif;?>
         </div>
-
+         
         <div class="certificates-slider__mobile">
           <div class="certificates-slider__box--mobile">
+            <?php if(have_rows('slajder_sertifikaty_kartochka')) : while(have_rows('slajder_sertifikaty_kartochka')): the_row()?>
             <div class="certificates-slider__wrapper">
               <div class="certificates-slider__item">
-                <img src="./images/home/certificate-1.jpg" alt="img">
+                <img src="<?php the_sub_field('slajder_sertifikaty_kartochka_kartinka');?>" alt="img">
               </div>
             </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-2.jpg" alt="img">
-              </div>
-            </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-3.jpg" alt="img">
-              </div>
-            </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-2.jpg" alt="img">
-              </div>
-            </div>
-            <div class="certificates-slider__wrapper">
-              <div class="certificates-slider__item">
-                <img src="./images/home/certificate-3.jpg" alt="img">
-              </div>
-            </div>
-            
+            <?php endwhile; endif;?>
           </div>
         </div>
 
@@ -493,5 +347,7 @@
           <div class="certificates-slider__arrows--mobile"></div>
         </div>
       </section>
+
+     
     </main>
 <?php get_footer();?>

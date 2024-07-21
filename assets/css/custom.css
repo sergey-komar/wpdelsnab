@@ -21,6 +21,21 @@
 .aside .aside-menu li:hover{
     color: #3f86f9;
 }
+.metal-box__list-item.metal-box__list-item--lestnicy{
+    color: #000;
+}
+.table-scroll{
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+.price{
+    background-color: #d9edf7;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
 
 @media(max-width: 700px){
     .menu__list {

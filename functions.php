@@ -41,3 +41,13 @@ if( function_exists('acf_add_options_page') ) {
 require_once get_template_directory() . '/inc/custom-type.php';
 
 
+define ('DISALLOW_FILE_EDIT', true);
+add_action("admin_menu", "remove_menus");
+function remove_menus() {
+  
+     remove_menu_page("plugins.php");              
+   
+}
+
+
+

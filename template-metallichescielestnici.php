@@ -12,7 +12,7 @@
                 <aside class="aside">
                   <ul>
                     <li>
-                        <a class="aside--active" href="">Металлические конструкции</a>
+                        <a class="aside--active" href="http://delshab/metallokonstrukcii/">Металлические конструкции</a>
                         <?php
                             wp_nav_menu([
                               'theme_location' => 'menu-metall',
@@ -50,7 +50,7 @@
                         <aside class="aside sidebar--mobile">
                         <ul>
                           <li>
-                              <a class="aside--active" href="">Металлические конструкции</a>
+                              <a class="aside--active" href="http://delshab/metallokonstrukcii/">Металлические конструкции</a>
                               <?php
                                   wp_nav_menu([
                                     'theme_location' => 'menu-metall',
@@ -75,90 +75,22 @@
                       </aside>
                       </div>
                       <div class="metalllest-block">
+                       <?php if(have_rows('metallicheskie_lestniczy_kartochka')) : while(have_rows('metallicheskie_lestniczy_kartochka')): the_row()?>
                         <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-1.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Лестницы на косоурах</div>
-                          <div class="metalllest-block__item-text">
-                            Маршевые, с площадкой, Г-образные, П-образные
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-2.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Лестницы на тетивах</div>
-                          <div class="metalllest-block__item-text">
-                            Ломаные, прямые, пилообразные, из швеллера
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-3.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Каркасы лестниц</div>
-                          <div class="metalllest-block__item-text">
-                            Из массива дерева, решетчатые, рифленые, лотки под плитку, гладкие
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-4.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Лестницы винтовые</div>
-                          <div class="metalllest-block__item-text">
-                            С площадкой, на опорной стойке, с ограждением, пожарные
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-5.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Наружные лестницы</div>
-                          <div class="metalllest-block__item-text">
-                            Прямые, Г-обраные, П-образные
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-6.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Технические лестницы</div>
-                          <div class="metalllest-block__item-text">ЛМ001, ЛМ002, ЛМ003</div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-7.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Лестницы канализационные</div>
-                          <div class="metalllest-block__item-text">
-                            Водосточные, канализационные, для камер теплосети, водопроводные
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-8.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Промышленные лестницы</div>
-                          <div class="metalllest-block__item-text">
-                            Из листа ПВЛ, из листа рифленого, из решетчатого настила, нержавеющие
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-9.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Мансардные лестницы</div>
-                          <div class="metalllest-block__item-text">
-                            Мансардные лестницы для загородных домов
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-9.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Забежные лестницы</div>
-                          <div class="metalllest-block__item-text">
-                            Винтовые, Г-образные, П-образные
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-9.jpg" alt="img" class="metalllest-block__item-img">
-                          <div class="metalllest-block__item-title">Профильные лестницы</div>
-                          <div class="metalllest-block__item-text">
-                            Маршевые, винтовые, с забежными ступенями
-                          </div>
-                        </div>
-                        <div class="metalllest-block__item">
-                          <img src="./images/metalllestnici/metalllestnici-1.jpg" alt="img" class="metalllest-block__item-img">
+                          <img src="<?php the_sub_field('metallicheskie_lestniczy_kartochka_izobrazhenie');?>" alt="img" class="metalllest-block__item-img">
                           <div class="metalllest-block__item-title">
-                            Площадки обслуживания
+                          <?php the_sub_field('metallicheskie_lestniczy_kartochka_zagolovok');?>
                           </div>
-                          <div class="metalllest-block__item-text">
-                            Модульные сборные платформы, площадки обслуживания и промышленные
-                          </div>
+          
+                            <ul class="metal-box__list">
+                            <?php if(have_rows('metallicheskie_lestniczy_kartochka_spisok')) : while(have_rows('metallicheskie_lestniczy_kartochka_spisok')): the_row()?>
+                              <li class="metal-box__list-item metal-box__list-item--lestnicy">
+                              <?php the_sub_field('metallicheskie_lestniczy_kartochka_spisok_tekst');?>
+                              </li>
+                              <?php endwhile; endif;?>
+                            </ul>
                         </div>
+                        <?php endwhile; endif;?>
                       </div>
                     
                   </div>
@@ -293,6 +225,10 @@
                 <p class="metallnam-box__text">
                   Стоимость зависит от материала и модели. Готовые конструкции доставляются по Москве и устанавливаются на объекте, после чего предоставляется гарантия.
                 </p>
+                  <div class="table-box">
+                  <?php the_content();?>
+                  </div>
+               
               </div>
             </div>
           </div>
@@ -323,7 +259,7 @@
                               </div>
                               <button class="are-wrapper__form-btn btn">Рассчитать</button>
                               </div>
-                              <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
+                              <img src="<?php echo get_template_directory_uri();?>/assets/images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                           </div>
                           </div>
                   </div>
@@ -333,77 +269,45 @@
           </div>
         </section>
 
-        <section class="certificates-slider certificates-slider--page">
-            <div class="container">
-              <h3 class="certificates-slider__title title">наши работы</h3>
-            </div>
-            
-            <div class="certificates-slider__box">
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalllestnici/metalllestnici-img-1.jpg" alt="img">
+        <section class="portfolio-slider">
+          <div class="container">
+            <h3 class="portfolio-slider__title title">Наши работы</h3>
+          </div>
+
+          <div class="portfolio-slider__box">
+            <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+            <div class="portfolio-slider__wrapper">
+              <div class="portfolio-slider__item">
+                <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                <div class="portfolio-slider__item-text">
+                <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
                 </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalllestnici/metalllestnici-img-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalllestnici/metalllestnici-img-3.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalllestnici/metalllestnici-img-2.jpg" alt="img">
-                </div>
-              </div>
-              <div class="certificates-slider__wrapper">
-                <div class="certificates-slider__item">
-                  <img src="./images/metalllestnici/metalllestnici-img-1.jpg" alt="img">
-                </div>
-              </div>
-              
-            </div>
-    
-            <div class="certificates-slider__mobile">
-              <div class="certificates-slider__box--mobile">
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalllestnici/metalllestnici-img-1.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalllestnici/metalllestnici-img-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalllestnici/metalllestnici-img-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalllestnici/metalllestnici-img-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="certificates-slider__wrapper">
-                  <div class="certificates-slider__item">
-                    <img src="./images/metalllestnici/metalllestnici-img-1.jpg" alt="img">
-                  </div>
-                </div>
-                
               </div>
             </div>
-    
-            <div class="container">
-              <div class="certificates-slider__arrows"></div>
-            </div>
-            <div class="container">
-              <div class="certificates-slider__arrows--mobile"></div>
-            </div>
+            <?php endwhile; endif;?>
+          </div>
+
+          <div class="portfolio-slider__mobile">
+                <div class="portfolio-slider__box--mobile">
+                  <?php if(have_rows('slajder_portfolio_kartochka')) : while(have_rows('slajder_portfolio_kartochka')): the_row()?>
+                  <div class="portfolio-slider__wrapper">
+                    <div class="portfolio-slider__item">
+                      <img src="<?php the_sub_field('slajder_portfolio_kartochka_kartinka');?>" class="portfolio-slider__item-img" alt="img">
+                      <div class="portfolio-slider__item-text">
+                      <?php the_sub_field('slajder_portfolio_kartochka_zagolovok');?>
+                      </div>
+                    </div>
+                  </div>
+                  <?php endwhile; endif;?>
+                </div>
+          </div>
+
+          <div class="container">
+            <div class="portfolio-slider__arrows"></div>
+          </div>
+          <div class="container">
+            <div class="portfolio-slider__arrows--mobile"></div>
+          </div>
         </section>
 
         <section class="customers-slider">
@@ -412,56 +316,25 @@
           </div>
           
           <div class="customers-slider__box">
+            <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
             <div class="customers-slider__wrapper">
               <div class="customers-slider__item">
-                <img src="./images/home/customers-1.jpg" alt="img">
+                <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
               </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-2.jpg" alt="img">
-              </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-3.jpg" alt="img">
-              </div>
-            </div>
-            <div class="customers-slider__wrapper">
-              <div class="customers-slider__item">
-                <img src="./images/home/customers-4.jpg" alt="img">
-              </div>
-            </div>
-            
-              
-            
+            </div> 
+            <?php endwhile; endif;?>
           </div>
 
           <div class="customers-slider__mobile">
-            <div class="container">
               <div class="customers-slider__box--mobile">
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-1.jpg" alt="img">
-                  </div>
+                <?php if(have_rows('slajder_zakazchiki_kartochka')) : while(have_rows('slajder_zakazchiki_kartochka')): the_row()?>
+              <div class="customers-slider__wrapper">
+                <div class="customers-slider__item">
+                  <img src="<?php the_sub_field('slajder_zakazchiki_kartochka_kartinka');?>" alt="img">
                 </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-2.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-3.jpg" alt="img">
-                  </div>
-                </div>
-                <div class="customers-slider__wrapper">
-                  <div class="customers-slider__item">
-                    <img src="./images/home/customers-4.jpg" alt="img">
-                  </div>
-                </div>
+              </div> 
+              <?php endwhile; endif;?>
               </div>
-            </div>
           </div>
 
           <div class="container">
@@ -471,5 +344,7 @@
             <div class="customers-slider__arrows--mobile"></div>
           </div>
         </section>
+
+
     </main>
 <?php get_footer();?>
