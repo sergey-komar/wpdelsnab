@@ -196,7 +196,7 @@
                           <img src="<?php echo get_template_directory_uri()?>/assets/images/metallicheskie/metallicheskie-img-8.jpg" alt="img">
                         </div>
                       </div>
-                      <button class="metallicheskie-box__wrapper-btn btn">Показать ещё</button>
+                      
                   </div>
                 </div>
                 

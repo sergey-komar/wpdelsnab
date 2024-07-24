@@ -1,61 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delsnab</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="./index.html" class="logo">
-          <img class="logo--desctop" src="./images/home/logo-header.svg" alt="img">
-          <img class="logo--mobile" src="./images/home/logo-mobile.svg" alt="img">
-        </a>
-        <div class="menu">
-          <nav class="nav">
-            <ul class="menu__list">
-              <li><a  href="#">Каталог</a></li>
-              <li><a  href="./work.html">Наши работы</a></li>
-              <li><a  href="./about.html">О нас</a></li>
-              <li><a class="menu__list-item--active" href="./map.html">Контакты</a></li>
-            </ul>
-          </nav>
-          <div class="box-mobile">
-            <div class="header__contact">
-              <a href="tel:++74955404855" class="header__contact-phone">+7 495 540 48 55</a>
-              <a href="mailto:delsnab@bk.ru" class="header__contact-email">delsnab@bk.ru</a>
-            </div>
-
-            <a href="#" class="header__inner-btn btn">Консультация</a>
-            <div class="header__info">
-              <div class="header__info-date">Пн-пт с 9:00 до 18:00</div>
-              <div class="header__info-address">Мытищи, ул. Силикатная, д.19</div>
-            </div>
-          </div>
-        </div>
-        <div class="header__info">
-          <div class="header__info-date">Пн-пт с 9:00 до 18:00</div>
-          <div class="header__info-address">Мытищи, ул. Силикатная, д.19</div>
-        </div>
-        <div class="header__contact">
-          <a href="tel:++74955404855" class="header__contact-phone">+7 495 540 48 55</a>
-          <a href="mailto:delsnab@bk.ru" class="header__contact-email">delsnab@bk.ru</a>
-        </div>
-        <a href="#" class="header__inner-btn btn">Консультация</a>
-        <div class="nav-icon">
-          <div class="nav-icon__middle"></div>
-        </div>
-      </div>
-    </div>
-  </header>
- 
-    <main class="main">
+<?php
+/**
+ * Template Name: Карта сайта
+ */
+?>
+<?php get_header();?>
+<main class="main">
 
        <section class="sitemap">
         <div class="container">
@@ -258,17 +207,7 @@
                             <div class="are-wrapper__info">
                                 
                                 <div class="are-wrapper__desc">
-                                <input type="text" class="are-wrapper__form-input" placeholder="Имя">
-                                <input type="text" class="are-wrapper__form-input" placeholder="Email">
-                                <input type="text" class="are-wrapper__form-input" placeholder="Сообщение">
-                                <div class="are-wrapper__file">
-                                    <input type="file">
-                                </div>
-                                <div class="are-wrapper__text">
-                                    <input type="checkbox" class="are-wrapper__form-checkbox">
-                                    <p>Я даю согласие на обработку своих персональных данных</p>
-                                </div>
-                                <button class="are-wrapper__form-btn btn">Рассчитать</button>
+                                <?php echo do_shortcode('[contact-form-7 id="e5941b5" title="Получить кп"]')?>
                                 </div>
                                 <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                             </div>
@@ -281,55 +220,4 @@
         </section>
     
     </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-block">
-          <div class="footer-block__item">
-            <a href="#" class="footer-block__item-logo">ЗМК ДЕЛСНАБ</a>
-            <div class="footer-block__item-subtitle">20 лет на рынке</div>
-          </div>
-          <div class="footer-block__item footer-block__item--mobile">
-            <a href="tel:+" class="footer-block__item-phone">+7 495 540 48 55</a>
-            <p class="footer-block__item-address">Мытищи, ул.Силикатная, д.19</p>
-            <a href="maito:delsnab@bk.ru" class="footer-block__item-email">delsnab@bk.ru</a>
-            <a href="#" class="footer-block__item-btn">Задать вопрос</a>
-          </div>
-          <div class="footer-block__item">
-            <ul class="footer__list">
-              <li><a href="#">Наши работы</a></li>
-              <li><a href="#">О нас</a></li>
-              <li><a href="./vacancies.html">Вакансии</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Политика обработки данных</a></li>
-            </ul>
-          </div>
-          <div class="footer-block__item">
-            <ul class="footer__list">
-              <li><a href="#">Металлоконструкции</a></li>
-              <li><a href="#">Проектирование</a></li>
-              <li><a href="#">Изделия из нержавейки</a></li>
-              <li><a href="#">Карта сайта</a></li>
-            </ul>
-          </div>
-          <div class="footer-block__item footer-block__item--hidden">
-            <a href="tel:+" class="footer-block__item-phone">+7 495 540 48 55</a>
-            <p class="footer-block__item-address">Мытищи, ул.Силикатная, д.19</p>
-            <a href="maito:delsnab@bk.ru" class="footer-block__item-email">delsnab@bk.ru</a>
-            <a href="#" class="footer-block__item-btn">Задать вопрос</a>
-          </div>
-        </div>
-        <div class="footer__line"></div>
-        <div class="footer__bottom">
-          <div class="footer__bottom-text">Все права защищены.</div>
-          <div class="footer__bottom-text">© Delsnab 2008-2024</div>
-        </div>
-      </div>
-    </footer>
-  
-
-
-
-  <script src="js/main.min.js"></script>
-</body>
-
-</html>
+<?php get_footer();?>

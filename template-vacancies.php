@@ -66,17 +66,7 @@
                     <div class="are-wrapper__info">
                         
                         <div class="are-wrapper__desc">
-                        <input type="text" class="are-wrapper__form-input" placeholder="Имя">
-                        <input type="text" class="are-wrapper__form-input" placeholder="Email">
-                        <input type="text" class="are-wrapper__form-input" placeholder="Сообщение">
-                        <div class="are-wrapper__file">
-                            <input type="file">
-                        </div>
-                        <div class="are-wrapper__text">
-                            <input type="checkbox" class="are-wrapper__form-checkbox">
-                            <p>Я даю согласие на обработку своих персональных данных</p>
-                        </div>
-                        <button class="are-wrapper__form-btn btn">Рассчитать</button>
+                        <?php echo do_shortcode('[contact-form-7 id="e5941b5" title="Получить кп"]')?>
                         </div>
                         <img src="./images/home/form-bg.jpg" alt="img" class="are-wrapper__info-img">
                     </div>
